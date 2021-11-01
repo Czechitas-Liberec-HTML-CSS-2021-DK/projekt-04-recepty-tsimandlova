@@ -21,6 +21,9 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #FFFFFF;
 }
 
 .paticka {
@@ -38,3 +41,191 @@ body {
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
 
+/* ----------------------------------------------------------------------- */
+/* -- Koment k úkolu: ---------------------------------------------------- */
+/* -- S tím paddingem si nevím rady (co jsem zkoušela, to nefungovalo), -- */ 
+/* -- tak jsem ty texty nastylovala hotentotsky přes pozicování. --------- */
+/* ----------------------------------------------------------------------- */
+
+.kontejner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  }
+
+.prvniCast {
+  order: 2;
+  }
+
+.druhaCast {
+  display: flex;
+  order: 1;
+  }
+
+.nazev {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  }
+
+.hlavniNazev {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1.75rem;
+  }
+
+.malyNazev {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  }
+
+.kategorie {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  }
+
+.komenty {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  }
+
+.hlavni {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  border-bottom: 1px solid #FFFFFF;
+  background-image: url('images/burger.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  }
+
+.maly {
+  display: flex;
+  flex-direction: column;
+  }
+
+.malySpolecne {
+  min-height: 90px;
+  border-bottom: 1px solid #FFFFFF;
+  position: relative;
+  }
+
+.maly2 {
+  background-image: url('images/sushi.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  }
+
+.maly3 {
+  background-image: url('images/rajcata.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  }
+
+.maly4 {
+  background-image: url('images/kure.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  }
+
+.maly5 {
+  background-image: url('images/grilovani.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  }
+
+
+/* Stredni obrazovka */
+@media (min-width: 480px) {
+  .nazev {
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    }
+
+  .hlavniNazev {
+    font-size: 2rem;
+    }
+  
+  .malyNazev {
+    font-size: 1.5rem;
+    }
+  
+  .kategorie {
+    position: absolute;
+    left: 1.25rem;
+    top: 1.25rem;
+    }
+  
+  .komenty {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    }
+
+  .hlavni {
+    min-height: 250px;
+    }
+
+  .maly {
+    flex-direction: row;
+    }
+
+  .malySpolecne {
+    min-height: 150px;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    }
+
+  .prvniMaly {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    }
+  
+  .druhyMaly {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    }
+} 
+
+/* Velka  obrazovka */
+@media (min-width: 860px) {
+  .kontejner {
+    display: flex;
+    flex-direction: row;
+    }
+
+  .hlavniNazev {
+    font-size: 3rem;
+    }
+  
+  .malyNazev {
+    font-size: 1.75rem;
+    }
+
+  .hlavni {
+    min-height: 400px;
+    width: 33.333%;
+    }
+
+  .malySpolecne {
+    min-height: 200px;
+    }
+
+  .maly {
+    width: 67.777%;
+    }
+}
